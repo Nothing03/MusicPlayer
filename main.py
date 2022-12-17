@@ -61,17 +61,6 @@ REPO = """
 
 
 @app.on_message(
-    filters.command(["start", "help"], config.PREFIXES)
-    & filters.group
-    & ~filters.edited
-)
-@language
-@handle_error
-async def help(_, message: Message, lang):
-    await message.reply_text(lang["helpText"].replace("<prefix>", config.PREFIXES[0]))
-
-
-@app.on_message(
     filters.command(["p", "play"], config.PREFIXES) & filters.group & ~filters.edited
 )
 @register
