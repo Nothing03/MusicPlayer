@@ -65,7 +65,7 @@ REPO = """
 )
 @handle_error
 async def repo(_, message: Message):
-    await message.reply_text(REPO)
+    await message.reply_text(f"**ᴘᴏɴɢ ʙᴀʙʏ​!**\n`{await pytgcalls.ping} ᴍs`"")
 
 
 @app.on_message(
