@@ -61,7 +61,7 @@ REPO = """
 
 
 @app.on_message(
-    filters.command("repo", config.PREFIXES) & filters.group & ~filters.edited
+    filters.command(["r", "repo"], config.PREFIXES) & filters.group & ~filters.edited
 )
 @handle_error
 async def repo(_, message: Message):
