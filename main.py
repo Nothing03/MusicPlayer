@@ -61,7 +61,7 @@ REPO = """
 
 
 @app.on_message(
-    filters.command(["p", "play"], config.PREFIXES) & pyrogram.filters.group & ~filters.edited
+    filters.command(["p", "play"], config.PREFIXES) & filters.group & ~filters.edited
 )
 @register
 @language
