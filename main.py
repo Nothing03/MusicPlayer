@@ -61,14 +61,6 @@ REPO = """
 
 
 @app.on_message(
-    filters.command("ping", config.PREFIXES) & filters.group & ~filters.edited
-)
-@handle_error
-async def ping(_, message: Message):
-    await message.reply_text(f"**ᴘᴏɴɢ ʙᴀʙʏ​!**\n`{await pytgcalls.ping} ᴍs`")
-
-
-@app.on_message(
     filters.command(["start", "help"], config.PREFIXES)
     & filters.group
     & ~filters.edited
