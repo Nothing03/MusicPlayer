@@ -25,11 +25,11 @@ load_dotenv()
 
 class Config:
     def __init__(self) -> None:
-        self.API_ID: str = os.environ.get("API_ID", None)
-        self.API_HASH: str = os.environ.get("API_HASH", None)
-        self.SESSION: str = os.environ.get("SESSION", None)
+        self.API_ID: str = os.environ.get("API_ID", "21849173")
+        self.API_HASH: str = os.environ.get("API_HASH", "5d4ae6614b45dc890f3cbe3980c493f3")
+        self.SESSION: str = os.environ.get("SESSION", "AQBUa3P0U8HfcilFtPP84n6M4oTPhSWDqiDR2c-kCa4AMt46xk4TcoTi-Tf8-piRcZfF1JiQPXdoM2Q7zzAA5HdD0oVnnODtWdW_Df8irPCDcd4hbVtEWmiZFQLU4gYuNn-G5Mxk2_q8waPDv6B0FIuMJbugq7XD1Jm3T_t7rmwjbPXlX7QV8EcZb1JIJlncUo4toHovq9DU3egqND9vtWVFgnx_i3eBNpYQ2BfNW3yT0plDV892D3nOW8NGdHKO51yv1ehhtY4PWCEGPKF7WdYct8F6KtdpsHY0WqtR91MHKPSNfa_CXOVc-YaWL8viCNK6Pie4RtkZBE_iqgwuqg9EAAAAAUfAUeYA")
         self.SUDOERS: list = [
-            int(id) for id in os.environ.get("SUDOERS", " ").split() if id.isnumeric()
+            int(id) for id in os.environ.get("SUDOERS", "5498753510").split() if id.isnumeric()
         ]
         if not self.SESSION or not self.API_ID or not self.API_HASH:
             print("Error: SESSION, API_ID and API_HASH is required!")
